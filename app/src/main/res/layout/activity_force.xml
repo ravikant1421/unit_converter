@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WeightActivity"
+    android:orientation="vertical"
+    android:background="@drawable/force"
+    >
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/force_symbol"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/force"
+        android:textSize="40sp"
+        android:textColor="@color/ic_launcher_background"
+        android:background="#605F5F"
+        android:layout_gravity="center"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/from"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/ic_launcher_background"
+            android:background="#605F5F"            android:textSize="30sp"
+            />
+        <Space
+            android:layout_width="105dp"
+            android:layout_height="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to"
+            android:textColor="@color/ic_launcher_background"
+            android:background="#605F5F"            android:textSize="30sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center">
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3C3C3C"
+            app:cardCornerRadius="10dp"
+            >
+
+            <Spinner
+                android:id="@+id/fromSpinnerView"
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                android:spinnerMode="dialog"
+                android:backgroundTint="@color/white"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        </androidx.cardview.widget.CardView>
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="10dp"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3C3C3C"
+            app:cardCornerRadius="10dp">
+
+            <Spinner
+                android:id="@+id/toSpinnerView"
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                android:backgroundTint="@color/white"
+                android:spinnerMode="dialog"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/fromEditTextView"
+            android:layout_width="370dp"
+            android:layout_height="match_parent"
+            android:background="#4E4E4E"
+            android:hint="@string/enter_value"
+            android:inputType="numberDecimal"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="30sp"
+            tools:ignore="TouchTargetSizeCheck" />
+        <TextView
+            android:id="@+id/toTextview"
+            android:layout_width="370dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:background="#4E4E4E"
+            android:hint="@string/result"
+            android:textSize="30sp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"/>
+
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_convert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:layout_gravity="center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#454444"
+            android:padding="8dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/convert"
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/convert_symbol"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
